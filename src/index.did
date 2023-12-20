@@ -1,0 +1,6 @@
+service: () -> {
+    checkBalance: (int64) -> (text) query;
+    createProperty: (int64, text, int64) -> (text);
+    createUser: (text, text, text, int64) -> (text);
+    investProperty: (int64, int64, int64) -> (text);
+}

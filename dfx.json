@@ -1,0 +1,13 @@
+{
+    "canisters": {
+        "company_stock": {
+            "type": "custom",
+            "main": "src/index.ts",
+            "candid": "src/index.did",
+            "build": "npx azle company_stock",
+            "wasm": ".azle/company_stock/company_stock.wasm",
+            "gzip": true
+        }
+    }
+}
+
