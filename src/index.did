@@ -1,6 +1,7 @@
 service: () -> {
-    checkBalance: (int64) -> (text) query;
-    createProperty: (int64, text, int64) -> (text);
-    createUser: (text, text, text, int64) -> (text);
-    investProperty: (int64, int64, int64) -> (text);
+    checkBalance: (text) -> (text) query;
+    checkUser: (text) -> (variant {Ok:record {id:text; status:text; money:nat; "principal":principal; uname:text; property:variant {Empty; Property:record {value:nat; shareHolders:vec record {"principal":principal; userId:text; name:text; percentages:nat}; pname:text; percentage:nat}}}; Err:text}) query;
+    createProperty: (text, text, nat) -> (variant {Ok:text; Err:text});
+    createUser: (text, text, nat) -> (variant {Ok:text; Err:text});
+    investProperty: (text, text, nat) -> (variant {Ok:text; Err:text});
 }
